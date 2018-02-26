@@ -1,0 +1,28 @@
+<h1>
+    liste reservation
+</h1>
+<table border="1">
+    <tr>
+        <th>ID</th> <th>lib</th> <th>pays</th>
+    </tr>
+
+    {% for r  in reservation %}
+        <tr>
+            <td>{{ r.id_reservation }}</td>
+            <td>{{ r.id_even }}</td>
+            <td>{{ r.pays }}</td>
+            <td>{{ r.idClient }}</td>
+
+
+
+            {#<td><a href="{{ path('UpdateModele',{'id':modeles.id}) }}">Modifier</a> </td>#}
+            {#<td><a href="{{ path('DeleteModele',{'id':modeles.id}) }}">Supprimer</a> </td>#}
+
+        </tr>
+
+
+    {% endfor %}
+
+</table>
+
+{#<a href="{{ path('Recherche') }}">Effectuer recherche</a>#}
